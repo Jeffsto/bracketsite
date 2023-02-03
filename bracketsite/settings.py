@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'bracketsite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'web',
+        'USER': 'webadmin',
+        'PASSWORD' : '',
+        'HOST' : '10.10.10.10',
+        'PORT' : '3306',
     }
 }
 
