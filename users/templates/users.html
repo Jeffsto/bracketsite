@@ -5,6 +5,10 @@
     <title>Users</title>
 </head>
 <body>
-    <p>Users</p>
+<ul>
+  {% for x in mymembers %}
+    <li>{{ x.firstname }} {{ x.lastname }} {{ x.email }}</li>
+  {% endfor %}
+</ul>
 </body>
 </html>
