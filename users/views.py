@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
-from .models import users
+from .models import Member
 
 def members(request):
     myusers = Member.objects.all().values()
