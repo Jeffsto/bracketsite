@@ -10,3 +10,11 @@ def members(request):
         'myusers':myusers,
     }
     return HttpResponse(template.render(context,request))
+
+def details(request, id):
+    myuser = Member.objects.get(id=id)
+    template = loader.get_template('details.html')
+    context= {
+        'myuser': myuser,
+    }
+    return HttpResponse(template.render(context,request))
