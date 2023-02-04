@@ -1,16 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>User Details</title>
-</head>
-<body>
-    <h1>{{ myuser.firstname }} {{ myuser.lastname }}</h1>
+{% extends "master.html" %}
 
-    <p>Phone: {{ myuser.phone }}</p>
-    <p>Member since: {{ myuser.joined_date }}</p>
-    <p>Email: {{ myuser.email }}</p>
+{% block title %}
+  Details about {{ mymember.firstname }} {{ mymember.lastname }}
+{% endblock %}
 
-    <p>Back to <a href="/users">Users</a></p>
-</body>
-</html>
+
+{% block content %}
+  <h1>{{ mymember.firstname }} {{ mymember.lastname }}</h1>
+  
+  <p>Phone {{ mymember.phone }}</p>
+  <p>Member since: {{ mymember.joined_date }}</p>
+  
+  <p>Back to <a href="/users">Users</a></p>
+  
+{% endblock %}
