@@ -7,7 +7,7 @@
 <body>
     <ul>
       {% for x in myusers %}
-        <li>{{ x.firstname }} {{ x.lastname }} {{ x.email }}</li>
+        <li><a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>
       {% endfor %}
     </ul>
 </body>
