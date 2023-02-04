@@ -5,5 +5,3 @@ class Member(models.Model):
   firstname = models.CharField(max_length=255)
   lastname = models.CharField(max_length=255)
   email = models.EmailField(max_length=255)
-  phone = models.IntegerField()
-  joined_date  = models.DateField()
