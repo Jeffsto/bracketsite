@@ -1,15 +1,15 @@
 {% extends "master.html" %}
 
 {% block title %}
-  Details about {{ mymember.firstname }} {{ mymember.lastname }}
+  Details about {{ myuser.firstname }} {{ myuser.lastname }}
 {% endblock %}
 
 
 {% block content %}
-  <h1>{{ mymember.firstname }} {{ mymember.lastname }}</h1>
+  <h1>{{ myuser.firstname }} {{ myuser.lastname }}</h1>
   
-  <p>Phone {{ mymember.phone }}</p>
-  <p>Member since: {{ mymember.joined_date }}</p>
+  <p>Phone {{ myuser.phone }}</p>
+  <p>Member since: {{ myuser.joined_date }}</p>
   
   <p>Back to <a href="/users">Users</a></p>
   
