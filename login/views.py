@@ -6,3 +6,7 @@ from django.contrib import messages
 
 def login_user(request):
     return render(request, 'authenticate/login.html', {})
+
+def main(request):
+    template = loader.get_template('main.html')
+    return HttpResponse(template.render())
